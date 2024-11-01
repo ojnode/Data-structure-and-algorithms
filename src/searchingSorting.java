@@ -22,7 +22,7 @@ public class searchingSorting {
         return sorted;
     }
 
-    public static ArrayList<Integer> insertionSort(ArrayList<Integer> arr) {
+    public static ArrayList<Integer> insertionSortNewArray(ArrayList<Integer> arr) {
         ArrayList<Integer> sorted = new ArrayList<>();
         int innerSize;
         sorted.add(arr.get(0));
@@ -39,6 +39,22 @@ public class searchingSorting {
             }
         }
         return sorted;
+    }
+
+    // inserton sort without creating new array
+    public static String insertionSort(int[] arr) {
+        int key;
+        int previousIndex;
+        for (int i = 0; i < (arr.length - 1); i++) {
+            key = arr[i + 1];
+            previousIndex = i;
+            while (previousIndex >= 0 && key < arr[previousIndex]) {
+                arr[previousIndex + 1] = arr[previousIndex];
+                previousIndex -= 1;
+            }
+            arr[previousIndex + 1] = key;
+        }
+        return Arrays.toString(arr);
     }
 
     public static String bubbleSort(int[] arr) {
@@ -62,8 +78,8 @@ public class searchingSorting {
     public static void main(String[] args) {
         // ArrayList<Integer> unsorted= new ArrayList<>(Arrays.asList(9, 5, 8, 1, 4,10));
         // System.out.println(selectionSort(unsorted));
-        // System.out.println(insertionSort(unsorted));
-        int[] unsorted = {5, 1, 7, 3, 8 ,9 , 1, 10, 0};
-        System.out.println(bubbleSort(unsorted));
+        int[] unsorted = {10, 0, 2, 1, 3, 0, 5, 10, 0, 22, 12, 1, 20};
+        System.out.println(insertionSort(unsorted));
+        // System.out.println(bubbleSort(unsorted));
     }
 }
