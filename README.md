@@ -8,4 +8,3 @@ Selection Sort is a simple comparison-based sorting algorithm. It divides the ar
 
 ### Time Complexity
 - **Best case**: O(n ** 2)
-- **Worst case**: O(n ** 3) due to the remove method
