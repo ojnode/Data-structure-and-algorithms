@@ -75,10 +75,10 @@ public class searchingSorting {
         }
         return Arrays.toString(arr);
     }
-    public static void main(String[] args) {
+    public static void main() {
         // ArrayList<Integer> unsorted= new ArrayList<>(Arrays.asList(9, 5, 8, 1, 4,10));
         // System.out.println(selectionSort(unsorted));
-        int[] unsorted = {10, 0, 2, 1, 3, 0, 5, 10, 0, 22, 12, 1, 20};
+        int[] unsorted = {10, 0, 2, 0, 5, 22, 12, 1, 20};
         System.out.println(insertionSort(unsorted));
         // System.out.println(bubbleSort(unsorted));
     }
