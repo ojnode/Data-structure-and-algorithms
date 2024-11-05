@@ -19,8 +19,9 @@ public class recursion {
         }
   
     }
+
     public static void main() {
         // System.out.println(sumOfnNumbers(12));
-        displayNumbers(3, 8);
+        displayNumbers(3, 10);
     }
 }
