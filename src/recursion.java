@@ -15,13 +15,22 @@ public class recursion {
         if (x < y && nextInteger < y) {
             System.out.print(nextInteger + " ");
             displayNumbers(nextInteger, y);
-
         }
-  
     }
 
-    public static void main() {
+    public static int fibonacci(int n) {
+        if (n <= 2) {
+            return 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+
+        
+    }
+
+    public static void main(String[] args) {
         // System.out.println(sumOfnNumbers(12));
-        displayNumbers(3, 10);
+        // displayNumbers(3, 10);
+        System.out.println(fibonacci(6));
     }
 }
